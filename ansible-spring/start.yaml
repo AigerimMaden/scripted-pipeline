@@ -1,0 +1,11 @@
+---
+- hosts: all
+
+  tasks:
+  - name: run mvn
+    shell: "cd spring-petclinic"
+  - name: run mvn
+    shell: "./mvnw package"
+  - name: start spring
+    shell: java -jar target/spring-petclinic-2.3.0.BUILD-SNAPSHOT.jar
+

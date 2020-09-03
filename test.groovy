@@ -1,7 +1,10 @@
-node ('master'){
-    stage('Init'){
-        withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-master-ssh-key', keyFileVariable: 'sshkey', passphraseVariable: '', usernameVariable: 'sshuser')]) {
-            sh 'ssh -o StrictHostKeyChecking=no -i $sshkey root@161.35.109.58 yum install epel-release -y'
-        }
+node {
+    stage("Pull Repo"){
+        git branch: 'solution', url: 'https://github.com/AigerimMaden/terraform-task.git'    }
+    stage("Pull Repo"){
+        ssh 'echo "Terraform Init"'
+    }
+    stage("Pull Repo"){
+        ssh 'echo "Terraform Apply"'
     }
 }

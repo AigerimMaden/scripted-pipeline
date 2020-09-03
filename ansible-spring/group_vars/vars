@@ -1,0 +1,3 @@
+---
+spring_repo: "{{ lookup('env', 'SPRING_REPO') }}"
+spring_branch: "{{ lookup('env', 'SPRING_BRANCH') }}" 

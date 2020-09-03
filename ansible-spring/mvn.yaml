@@ -1,0 +1,6 @@
+---
+
+- hosts: all
+  tasks:
+    - name: install mvn
+      shell: sudo yum install maven -y

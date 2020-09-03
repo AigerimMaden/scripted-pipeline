@@ -1,0 +1,9 @@
+---
+- hosts: all
+
+  tasks:
+  - name: Pull Flaskex
+    git:
+      repo: "SPRING_REPO"
+      version: "SPRING_BRANCH"
+      dest: /var/www/spring/
